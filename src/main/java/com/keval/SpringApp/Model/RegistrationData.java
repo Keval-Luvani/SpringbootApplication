@@ -1,6 +1,6 @@
 package com.keval.SpringApp.Model;
 
-public class Registration {
+public class RegistrationData {
 	private String name;
 	private String email;
 	private String password;
@@ -8,13 +8,11 @@ public class Registration {
 	private String mobileno;
 	private String role;
 	
-	public Registration() {
-		super();
+	public RegistrationData() {
 	}
 
-	public Registration(String name, String email, String password, String confirmPassword, String mobileno,
+	public RegistrationData(String name, String email, String password, String confirmPassword, String mobileno,
 			String role) {
-		super();
 		this.name = name;
 		this.email = email;
 		this.password = password;

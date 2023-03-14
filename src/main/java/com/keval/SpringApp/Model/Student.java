@@ -1,11 +1,18 @@
 package com.keval.SpringApp.Model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Student {
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", email=" + email + ", name=" + name + ", mobileno=" + mobileno + "]";
+	}
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String email;
 	private String name;
@@ -17,6 +24,13 @@ public class Student {
 		this.email = email;
 		this.name = name;
 		this.mobileno = mobileno;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getEmail() {
 		return this.email;

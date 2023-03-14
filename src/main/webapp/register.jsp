@@ -8,7 +8,7 @@
 <title>Insert Data</title>
 </head>
 <body>
-	<form:form action="/register" method="post" modelAttribute="registration">
+	<form:form action="/register" method="post" modelAttribute="registrationData">
 		<form:label path="name">Name</form:label>
 		<form:input path="name" type="text" required="required" /><br>
 		
@@ -28,6 +28,7 @@
 		<form:radiobutton path="role" value="ROLE_TEACHER"/>Teacher
 		<form:radiobutton path="role" value="ROLE_STUDENT"/>Student 
 		<br>
+		<span style="color:red">${error}</span>
 		<form:button>Register</form:button>
 	</form:form>
 </body>

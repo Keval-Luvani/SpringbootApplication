@@ -13,8 +13,10 @@
 		
 		<label for="securitycode">password</label>
 		<input name="securitycode" type="password" required="required" /><br>
-		
+		<span>${error}</span>
+		<c:if test="${error}"><br></c:if>	
 		<button type="submit">Submit</button>
 	</form>
+	
 </body>
 </html>
