@@ -22,7 +22,6 @@ public class StudentDaoImpl implements StudentDao{
 	}
 
 	public void updateStudent(Student student) {
-		System.out.print(student.getId());
 		studentRepository.save(student);
 	}
 

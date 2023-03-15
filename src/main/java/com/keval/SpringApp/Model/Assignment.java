@@ -1,6 +1,7 @@
 package com.keval.SpringApp.Model;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,19 +17,21 @@ public class Assignment {
 	private String description;
 	private int score;
 	private String dueDate;
-	@ManyToOne
+
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="assignedBy")
 	private Teacher teacher;
 	
 	public Assignment() {
 	}
-
-	public Assignment(int id, String title, String description, int score, String duedate, Teacher teacher) {
+	
+	public Assignment(int id, String title, String description, int score, String dueDate, Teacher teacher) {
+		super();
 		this.id = id;
 		this.title = title;
 		this.description = description;
 		this.score = score;
-		this.dueDate = duedate;
+		this.dueDate = dueDate;
 		this.teacher = teacher;
 	}
 
@@ -63,12 +66,12 @@ public class Assignment {
 	public void setScore(int score) {
 		this.score = score;
 	}
-
+	
 	public String getDueDate() {
 		return dueDate;
 	}
-
-	public void setDuedate(String dueDate) {
+	
+	public void setDueDate(String dueDate) {
 		this.dueDate = dueDate;
 	}
 

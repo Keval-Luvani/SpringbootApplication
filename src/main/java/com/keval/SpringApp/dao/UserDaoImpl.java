@@ -15,11 +15,16 @@ public class UserDaoImpl implements UserDao{
 	
 	public List<User> getUsers() {
 		List<User> userList = userRepository.findAll();
-		System.out.println(userList);
 		return userList;
 	}
 	
 	public void addUser(User user) {
 		userRepository.save(user);
 	}
+
+	public User getUser(String emailId) {
+		return userRepository.getByEmail(emailId);
+	}
+
+	
 }
