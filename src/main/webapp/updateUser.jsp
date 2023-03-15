@@ -21,7 +21,7 @@
 			<form:input path="email" type="hidden" equired="required" />
 			
 			<form:label path="mobileno">Mobile No.</form:label>
-			<form:input path="mobileno" type="text" required="required" /><br>
+			<form:input path="mobileno" type="tel" pattern="[6-9]{1}[0-9]{9}" required="required" /><br>
 			
 			<span style="color:red;margin:0px;">${error}</span>
 			

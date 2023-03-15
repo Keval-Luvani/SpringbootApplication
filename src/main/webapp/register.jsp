@@ -24,7 +24,7 @@
 			<form:input path="confirmPassword" type="password" required="required" /><br>
 			
 			<form:label path="mobileno">Mobile No.</form:label>
-			<form:input path="mobileno" type="text" required="required" /><br>
+			<form:input path="mobileno" type="tel" pattern="[6-9]{1}[0-9]{9}" required="required" /><br>
 			
 			<form:label path="role">Role</form:label>
 			<form:radiobutton path="role" value="ROLE_TEACHER"/>Teacher

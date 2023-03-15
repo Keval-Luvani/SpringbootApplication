@@ -21,7 +21,7 @@
 			<form:textarea path="description" rows="2" cols="30" required="required" /><br>
 			
 			<form:label path="score">Score</form:label>
-			<form:input path="score" type="score" required="required" /><br>
+			<form:input path="score" type="number" required="required" /><br>
 			
 			<form:label path="dueDate">Due Date</form:label>
 			<form:input path="dueDate" type="date" min="${todayDate}" required="required" /><br>
